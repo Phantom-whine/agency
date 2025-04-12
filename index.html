@@ -1,0 +1,435 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>WordCraft Pro | Expert Copywriting Services</title>
+    <script src="https://cdnjs.cloudflare.com/ajax/libs/alpinejs/3.13.5/cdn.min.js" defer></script>
+    <script src="https://cdn.tailwindcss.com"></script>
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.4.2/css/all.min.css">
+</head>
+<body class="font-sans antialiased text-gray-800">
+    <!-- Navigation -->
+    <nav class="bg-white shadow-md" x-data="{ isOpen: false }">
+        <div class="container px-6 py-4 mx-auto md:flex md:justify-between md:items-center">
+            <div class="flex items-center justify-between">
+                <div>
+                    <a class="text-2xl font-bold text-blue-600" href="#">
+                        WordCraft<span class="text-gray-800">Pro</span>
+                    </a>
+                </div>
+                
+                <!-- Mobile menu button -->
+                <div class="flex md:hidden">
+                    <button type="button" class="text-gray-500 hover:text-gray-600 focus:outline-none focus:text-gray-600" 
+                            @click="isOpen = !isOpen">
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" x-show="!isOpen">
+                            <path fill-rule="evenodd" d="M4 5h16a1 1 0 0 1 0 2H4a1 1 0 1 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2zm0 6h16a1 1 0 0 1 0 2H4a1 1 0 0 1 0-2z"></path>
+                        </svg>
+                        <svg viewBox="0 0 24 24" class="w-6 h-6 fill-current" x-show="isOpen">
+                            <path fill-rule="evenodd" d="M18.278 16.864a1 1 0 0 1-1.414 1.414l-4.829-4.828-4.828 4.828a1 1 0 0 1-1.414-1.414l4.828-4.829-4.828-4.828a1 1 0 0 1 1.414-1.414l4.829 4.828 4.828-4.828a1 1 0 1 1 1.414 1.414l-4.828 4.829 4.828 4.828z"></path>
+                        </svg>
+                    </button>
+                </div>
+            </div>
+
+            <!-- Mobile Menu open: "block", Menu closed: "hidden" -->
+            <div class="flex-col mt-2 space-y-4 md:flex md:space-y-0 md:flex-row md:items-center md:space-x-10 md:mt-0" 
+                :class="{'flex': isOpen, 'hidden': !isOpen}">
+                <a class="text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600" href="#">Home</a>
+                <a class="text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600" href="#services">Services</a>
+                <a class="text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600" href="#work">Our Work</a>
+                <a class="text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600" href="#process">Process</a>
+                <a class="text-sm font-medium text-gray-700 transition-colors duration-300 hover:text-blue-600" href="#testimonials">Testimonials</a>
+                <a class="px-4 py-2 text-sm font-medium text-white transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none" href="#contact">Contact Us</a>
+            </div>
+        </div>
+    </nav>
+
+    <!-- Hero Section -->
+    <div class="bg-gradient-to-r from-blue-100 via-white to-blue-50">
+        <div class="container px-6 py-16 mx-auto text-center">
+            <div class="max-w-3xl mx-auto">
+                <h1 class="text-4xl font-extrabold text-gray-800 md:text-5xl">
+                    Words That Convert, <span class="text-blue-600">Copy That Sells</span>
+                </h1>
+                <p class="mt-6 text-xl text-gray-600">
+                    Expert copywriting services that drive engagement, boost conversions, and grow your business.
+                </p>
+                <div class="flex flex-col mt-8 space-y-3 sm:space-y-0 sm:flex-row sm:justify-center sm:space-x-4">
+                    <a href="mailto:test@gmail.com" class="px-8 py-3 text-lg font-medium text-white transition-colors duration-300 transform bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none">
+                        Contact Us
+                    </a>
+                    <a href="#services" class="px-8 py-3 text-lg font-medium text-blue-600 transition-colors duration-300 transform bg-white border border-blue-600 rounded-md hover:bg-gray-50 focus:outline-none">
+                        Our Services
+                    </a>
+                </div>
+                <div class="mt-10">
+                    <img src="/api/placeholder/800/400" alt="Copywriting Services" class="mx-auto rounded-lg shadow-xl">
+                </div>
+            </div>
+        </div>
+    </div>
+
+    <!-- Services Section -->
+    <section id="services" class="py-16 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Our Services</h2>
+                <p class="mt-4 text-gray-600">Tailored copywriting solutions for all your business needs</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Service 1 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-globe text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Website Copy</h3>
+                    <p class="mt-2 text-gray-600">Compelling website content that engages visitors and drives conversions, optimized for both users and search engines.</p>
+                </div>
+
+                <!-- Service 2 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-envelope-open-text text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Email Campaigns</h3>
+                    <p class="mt-2 text-gray-600">Strategic email sequences that nurture leads, build relationships, and drive sales with persuasive messaging.</p>
+                </div>
+
+                <!-- Service 3 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-ad text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Ad Copywriting</h3>
+                    <p class="mt-2 text-gray-600">Attention-grabbing ad copy for social media, PPC, and print that maximizes ROI and drives qualified leads.</p>
+                </div>
+
+                <!-- Service 4 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-pen-fancy text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Content Writing</h3>
+                    <p class="mt-2 text-gray-600">Engaging blog posts, articles, and long-form content that establishes thought leadership and drives organic traffic.</p>
+                </div>
+
+                <!-- Service 5 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-bullhorn text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">Brand Messaging</h3>
+                    <p class="mt-2 text-gray-600">Develop a distinctive voice and consistent messaging strategy that resonates with your target audience.</p>
+                </div>
+
+                <!-- Service 6 -->
+                <div class="p-6 bg-white rounded-lg shadow-md transition-all duration-300 hover:shadow-xl border-t-4 border-blue-600">
+                    <div class="text-blue-600 mb-4">
+                        <i class="fas fa-chart-line text-3xl"></i>
+                    </div>
+                    <h3 class="text-xl font-bold text-gray-800">SEO Copywriting</h3>
+                    <p class="mt-2 text-gray-600">Keyword-optimized content that ranks higher in search results while maintaining a natural, engaging tone.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Our Work Section -->
+    <section id="work" class="py-16 bg-gray-50">
+        <div class="container px-6 mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Our Work</h2>
+                <p class="mt-4 text-gray-600">See the results we've delivered for our clients</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3" x-data="{ activeCase: null }">
+                <!-- Case Study 1 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                    <img src="/api/placeholder/400/250" alt="Case Study 1" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">E-commerce Revenue Boost</h3>
+                        <p class="mt-2 text-gray-600">Product descriptions and email sequences that increased conversion rates by 32%</p>
+                        <button @click="activeCase = 1" class="mt-4 text-blue-600 hover:underline">Read Case Study</button>
+                    </div>
+                </div>
+
+                <!-- Case Study 2 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                    <img src="/api/placeholder/400/250" alt="Case Study 2" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">SaaS Website Overhaul</h3>
+                        <p class="mt-2 text-gray-600">Complete website copy refresh that doubled demo sign-ups within 90 days</p>
+                        <button @click="activeCase = 2" class="mt-4 text-blue-600 hover:underline">Read Case Study</button>
+                    </div>
+                </div>
+
+                <!-- Case Study 3 -->
+                <div class="overflow-hidden bg-white rounded-lg shadow-md">
+                    <img src="/api/placeholder/400/250" alt="Case Study 3" class="w-full h-48 object-cover">
+                    <div class="p-6">
+                        <h3 class="text-xl font-bold text-gray-800">Finance Blog Growth</h3>
+                        <p class="mt-2 text-gray-600">Content strategy and SEO articles that increased organic traffic by 156%</p>
+                        <button @click="activeCase = 3" class="mt-4 text-blue-600 hover:underline">Read Case Study</button>
+                    </div>
+                </div>
+
+                <!-- Modal for Case Studies -->
+                <div class="fixed inset-0 z-50 flex items-center justify-center p-4 bg-black bg-opacity-50" 
+                     x-show="activeCase !== null" 
+                     x-cloak
+                     @click.away="activeCase = null">
+                    <div class="w-full max-w-2xl p-6 bg-white rounded-lg shadow-xl" @click.stop>
+                        <div class="flex justify-between items-center mb-4">
+                            <h3 class="text-2xl font-bold" x-text="activeCase === 1 ? 'E-commerce Revenue Boost' : activeCase === 2 ? 'SaaS Website Overhaul' : 'Finance Blog Growth'"></h3>
+                            <button @click="activeCase = null" class="text-gray-500 hover:text-gray-700">
+                                <i class="fas fa-times text-xl"></i>
+                            </button>
+                        </div>
+                        <img :src="'/api/placeholder/800/400'" class="w-full h-64 object-cover rounded mb-4">
+                        <div x-show="activeCase === 1">
+                            <p class="text-gray-700 mb-4">For this e-commerce client, we completely revamped their product descriptions, category pages, and email marketing sequences.</p>
+                            <ul class="list-disc pl-5 mb-4 text-gray-700">
+                                <li>Increased conversion rate from 2.1% to 3.4%</li>
+                                <li>32% boost in revenue within the first quarter</li>
+                                <li>Email open rates improved by 45%</li>
+                            </ul>
+                            <p class="text-gray-700">Our strategic approach to highlighting product benefits and creating urgency resulted in significantly improved customer engagement and sales performance.</p>
+                        </div>
+                        <div x-show="activeCase === 2">
+                            <p class="text-gray-700 mb-4">We completely restructured this SaaS company's website messaging to better communicate their unique value proposition and simplify complex features.</p>
+                            <ul class="list-disc pl-5 mb-4 text-gray-700">
+                                <li>Demo sign-ups increased by 105% over 90 days</li>
+                                <li>Average time on site improved by 47%</li>
+                                <li>Bounce rate decreased from 67% to 42%</li>
+                            </ul>
+                            <p class="text-gray-700">Our customer-focused copy helped visitors quickly understand the product's benefits and take action, resulting in significant improvements across all key performance metrics.</p>
+                        </div>
+                        <div x-show="activeCase === 3">
+                            <p class="text-gray-700 mb-4">For this financial advisory firm, we developed a comprehensive content strategy focusing on high-value keywords and addressing common customer pain points.</p>
+                            <ul class="list-disc pl-5 mb-4 text-gray-700">
+                                <li>Organic traffic increased by 156% year-over-year</li>
+                                <li>20+ page-one Google rankings for competitive terms</li>
+                                <li>Email subscriber list grew by 78%</li>
+                            </ul>
+                            <p class="text-gray-700">Our SEO-optimized yet engaging content established the client as a thought leader in their industry while driving significant qualified traffic to their site.</p>
+                        </div>
+                        <div class="mt-6">
+                            <a href="#contact" @click="activeCase = null" class="px-4 py-2 text-white bg-blue-600 rounded hover:bg-blue-500">Contact Us for Similar Results</a>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Process Section -->
+    <section id="process" class="py-16 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Our Process</h2>
+                <p class="mt-4 text-gray-600">How we create copy that connects and converts</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-10 mt-10 md:grid-cols-2 lg:grid-cols-4">
+                <!-- Step 1 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white text-2xl font-bold">1</div>
+                    <h3 class="text-xl font-bold text-gray-800">Discovery</h3>
+                    <p class="mt-2 text-gray-600">We dive deep into your business, audience, and goals to understand what makes you unique.</p>
+                </div>
+
+                <!-- Step 2 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white text-2xl font-bold">2</div>
+                    <h3 class="text-xl font-bold text-gray-800">Strategy</h3>
+                    <p class="mt-2 text-gray-600">We develop a tailored copywriting strategy aligned with your business objectives and target audience.</p>
+                </div>
+
+                <!-- Step 3 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white text-2xl font-bold">3</div>
+                    <h3 class="text-xl font-bold text-gray-800">Creation</h3>
+                    <p class="mt-2 text-gray-600">Our expert copywriters craft compelling content that engages your audience and drives action.</p>
+                </div>
+
+                <!-- Step 4 -->
+                <div class="text-center">
+                    <div class="inline-flex items-center justify-center w-16 h-16 mx-auto mb-4 rounded-full bg-blue-600 text-white text-2xl font-bold">4</div>
+                    <h3 class="text-xl font-bold text-gray-800">Refinement</h3>
+                    <p class="mt-2 text-gray-600">We review, revise, and perfect your copy until it achieves maximum impact and effectiveness.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Testimonials Section -->
+    <section id="testimonials" class="py-16 bg-gray-50">
+        <div class="container px-6 mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Client Testimonials</h2>
+                <p class="mt-4 text-gray-600">What our clients say about working with us</p>
+            </div>
+
+            <div class="grid grid-cols-1 gap-8 mt-10 md:grid-cols-2 lg:grid-cols-3">
+                <!-- Testimonial 1 -->
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600">"The team at WordCraftPro completely transformed our website copy. Their strategic approach to messaging helped us clarify our value proposition and speak directly to our ideal customers. The results have been outstanding!"</p>
+                    <div class="flex items-center mt-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">JD</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Jessica Daniels</h4>
+                            <p class="text-gray-600">Marketing Director, TechSolutions Inc.</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 2 -->
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600">"I've worked with many copywriters over the years, but none have delivered the quality and results that WordCraftPro has. Their email sequences have doubled our conversion rates and their process is smooth and professional."</p>
+                    <div class="flex items-center mt-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">MR</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Michael Rodriguez</h4>
+                            <p class="text-gray-600">Founder, EcoProducts Online</p>
+                        </div>
+                    </div>
+                </div>
+
+                <!-- Testimonial 3 -->
+                <div class="p-6 bg-white rounded-lg shadow-md">
+                    <div class="text-yellow-400 mb-4">
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                        <i class="fas fa-star"></i>
+                    </div>
+                    <p class="italic text-gray-600">"WordCraftPro's content strategy has been a game-changer for our blog. The quality of the writing is excellent, but what really sets them apart is their understanding of our audience and SEO. Our organic traffic has never been higher!"</p>
+                    <div class="flex items-center mt-4">
+                        <div class="w-12 h-12 bg-blue-600 rounded-full flex items-center justify-center text-white font-bold">AL</div>
+                        <div class="ml-4">
+                            <h4 class="text-lg font-bold text-gray-800">Amanda Lee</h4>
+                            <p class="text-gray-600">Content Manager, FinancePro Services</p>
+                        </div>
+                    </div>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- CTA Section -->
+    <section class="py-20 bg-blue-600">
+        <div class="container px-6 mx-auto text-center">
+            <h2 class="text-3xl font-bold text-white">Ready to transform your business with powerful copy?</h2>
+            <p class="max-w-lg mx-auto mt-4 text-xl text-blue-100">Let's work together to craft messages that resonate with your audience and drive real business results.</p>
+            <a href="#contact" class="inline-block px-8 py-3 mt-8 text-lg font-medium text-blue-600 transition-colors duration-300 transform bg-white rounded-md hover:bg-gray-100 focus:outline-none">
+                Get Started Today
+            </a>
+        </div>
+    </section>
+
+    <!-- Contact Section -->
+    <section id="contact" class="py-16 bg-white">
+        <div class="container px-6 mx-auto">
+            <div class="text-center">
+                <h2 class="text-3xl font-bold text-gray-800">Contact Us</h2>
+                <p class="mt-4 text-gray-600">Ready to discuss your project? Get in touch with our team.</p>
+            </div>
+
+            <div class="max-w-lg mx-auto mt-10" x-data="{ formSubmitted: false }">
+                <div x-show="!formSubmitted">
+                    <form @submit.prevent="formSubmitted = true">
+                        <div class="mb-6">
+                            <label for="name" class="block mb-2 text-sm font-medium text-gray-700">Your Name</label>
+                            <input type="text" id="name" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="email" class="block mb-2 text-sm font-medium text-gray-700">Email Address</label>
+                            <input type="email" id="email" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" required>
+                        </div>
+                        <div class="mb-6">
+                            <label for="company" class="block mb-2 text-sm font-medium text-gray-700">Company Name</label>
+                            <input type="text" id="company" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600">
+                        </div>
+                        <div class="mb-6">
+                            <label for="project" class="block mb-2 text-sm font-medium text-gray-700">Project Description</label>
+                            <textarea id="project" rows="4" class="w-full px-4 py-2 border border-gray-300 rounded-md focus:outline-none focus:ring-2 focus:ring-blue-600" required></textarea>
+                        </div>
+                        <div class="flex justify-between items-center">
+                            <a href="mailto:test@gmail.com" class="text-blue-600 hover:underline">
+                                <i class="far fa-envelope mr-2"></i>test@gmail.com
+                            </a>
+                            <button type="submit" class="px-6 py-2 text-white bg-blue-600 rounded-md hover:bg-blue-500 focus:outline-none">
+                                Send Message
+                            </button>
+                        </div>
+                    </form>
+                </div>
+                <div x-show="formSubmitted" class="p-6 bg-green-100 rounded-md text-center">
+                    <i class="fas fa-check-circle text-green-500 text-4xl mb-4"></i>
+                    <h3 class="text-xl font-bold text-gray-800">Thank you for your message!</h3>
+                    <p class="mt-2 text-gray-600">We'll get back to you within 24 hours.</p>
+                    <button @click="formSubmitted = false" class="mt-4 px-4 py-2 text-blue-600 border border-blue-600 rounded-md hover:bg-blue-50 focus:outline-none">
+                        Send Another Message
+                    </button>
+                </div>
+            </div>
+        </div>
+    </section>
+
+    <!-- Footer -->
+    <footer class="py-10 bg-gray-800 text-white">
+        <div class="container px-6 mx-auto">
+            <div class="flex flex-col items-center md:flex-row md:justify-between">
+                <div class="mb-6 md:mb-0">
+                    <a class="text-2xl font-bold text-white" href="#">
+                        WordCraft<span class="text-blue-400">Pro</span>
+                    </a>
+                    <p class="mt-2 text-gray-400">Words that work. Copy that converts.</p>
+                </div>
+                <div class="flex space-x-6">
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-facebook-f text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-twitter text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-instagram text-xl"></i>
+                    </a>
+                    <a href="#" class="text-gray-400 hover:text-white transition-colors duration-300">
+                        <i class="fab fa-linkedin-in text-xl"></i>
+                    </a>
+                </div>
+            </div>
+            <hr class="my-6 border-gray-700">
+            <div class="flex flex-col items-center md:flex-row md:justify-between">
+                <p class="text-sm text-gray-400">© 2025 WordCraftPro. All rights reserved.</p>
+                <div class="flex mt-4 space-x-6 md:mt-0">
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Privacy Policy</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Terms of Service</a>
+                    <a href="#" class="text-sm text-gray-400 hover:text-white">Cookie Policy</a>
+                </div>
+            </div>
+        </div>
+    </footer>
+</body>
+</html>
+</antA
